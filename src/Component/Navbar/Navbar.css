@@ -1,0 +1,12 @@
+/* Ensure content does not overlap the fixed navbar */
+body {
+    padding-top: 70px; /* Adjust according to navbar height */
+  }
+  
+  /* Style for the fixed navbar */
+  .navbar {
+    z-index: 1030; /* Ensure it stays above other content */
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  

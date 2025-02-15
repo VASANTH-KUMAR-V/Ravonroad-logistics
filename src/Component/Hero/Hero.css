@@ -1,0 +1,55 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .hero-overlay {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .tracking-form .form-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tracking-form .form-control {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .tracking-form .btn {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .tracking-form .btn:hover {
+    background-color: #0056b3;
+  }
+  
