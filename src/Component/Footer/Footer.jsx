@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* <div className="footer-section social">
+        <div className="footer-section social">
           <h3>FOLLOW US</h3>
           <div className="social-icons">
             <a href="#"><i className="fab fa-facebook"><FaFacebookF /></i></a>
@@ -41,7 +41,7 @@ const Footer = () => {
             <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
             <a href="#"><i className="fab fa-linkedin"><FaLinkedinIn /></i></a>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="footer-bottom">
         <p>

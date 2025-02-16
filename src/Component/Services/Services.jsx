@@ -40,27 +40,22 @@ const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div >
-      <div className="block-heading-1">
-              <h2>Services</h2>
-              <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                there live the blind texts.
-              </p>
-      </div>
+    <div className="services-wrapper">
+      <h2 className="contact-heading">Contact Us</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quam corporis, eveniet similique nostrum dolores delectus, dolore optio deleniti beatae earum et! Dolorum natus dolore in quam, ut velit officia.</p>
       <div className="services-container">
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={`service-card ${hoveredIndex === index ? "active" : "inactive"}`}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <div className="service-icon">{service.icon}</div>
-          <h3 className="service-title">{service.title}</h3>
-          <p className="service-description">{service.description}</p>
-        </div>
-      ))}
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={`service-card ${hoveredIndex === index ? "active" : "inactive"}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <div className="service-icon">{service.icon}</div>
+            <h3 className="service-title">{service.title}</h3>
+            <p className="service-description">{service.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
