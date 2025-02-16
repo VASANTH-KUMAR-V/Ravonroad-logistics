@@ -1,43 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaEnvelope, FaPhone, FaFacebook, FaInstagram } from "react-icons/fa";
-import "./Navbar.css"; // Import CSS for additional styling
+import "./Navbar.css";
 
 const ResponsiveNavbar = () => {
+  const [expanded, setExpanded] = useState(false); // Track navbar state
+
+  // Function to scroll and close navbar
+  const scrollToSection = (section) => {
+    const element = document.querySelector(`.${section}`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setExpanded(false); // Close the navbar after clicking
+  };
+
   return (
     <>
       {/* Top Bar with Contact Info */}
-      <div className="top-bar bg-light py-2 d-none d-md-flex justify-content-between px-4">
+      <div className="top-bar">
         <div className="contact-info">
-          <FaEnvelope /> <span className="ms-2">info@ravonroadtrucing.com</span>
-          <FaPhone className="ms-4" /> <span className="ms-2">+1 (872) 222-2379</span>
+          <FaEnvelope /> <span>info@ravonroadtrucking.com</span>
+          <FaPhone className="ms-4" /> <span>+1 (872) 222-2379</span>
         </div>
         <div className="social-icons-navbar">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="me-3" />
+            <FaInstagram />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <FaFacebook className="ms-3" />
+            <FaFacebook />
           </a>
         </div>
       </div>
 
-      {/* Fixed Navbar */}
-      <Navbar fixed="top" expand="lg" className="bg-white shadow-sm">
+      {/* Main Navbar */}
+      <Navbar fixed="top" expand="lg" expanded={expanded} className="custom-navbar">
         <Container>
-          <Navbar.Brand href="#" className="fw-bold text-primary fs-3">
+          <Navbar.Brand onClick={() => scrollToSection("hero-section")} className="nav-brand">
             Ravonroad Trucking
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#">Home</Nav.Link>
-              <Nav.Link href="#">Services</Nav.Link>
-              <Nav.Link href="#">About Us</Nav.Link>
-              <Nav.Link href="#">Why Us</Nav.Link>
-              <Nav.Link href="#">Testimonials</Nav.Link>
-              <Nav.Link href="#">Blog</Nav.Link>
-              <Nav.Link href="#">Contact</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection("hero-section")}>Home</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("services-wrapper")}>Services</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("about-container")}>About Us</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("why-depot-container")}>Why Us</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("testimonials-section")}>Testimonials</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("blog-section")}>Blog</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("contact-container")}>Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
