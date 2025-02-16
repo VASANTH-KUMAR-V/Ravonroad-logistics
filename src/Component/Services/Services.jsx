@@ -41,8 +41,8 @@ const Services = () => {
 
   return (
     <div className="services-wrapper">
-      <h2 className="contact-heading">Contact Us</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quam corporis, eveniet similique nostrum dolores delectus, dolore optio deleniti beatae earum et! Dolorum natus dolore in quam, ut velit officia.</p>
+      <h2 className="contact-heading">Services</h2>
+      <p>We ensure safe and timely delivery of goods across the country.</p>
       <div className="services-container">
         {services.map((service, index) => (
           <div

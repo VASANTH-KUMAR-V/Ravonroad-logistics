@@ -1,55 +1,107 @@
+/* Hero Section */
 .hero-section {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../Assets/Img/depot_hero_1.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Background Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+}
+
+/* Content Wrapper */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensure text is above overlay */
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Hero Heading */
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Hero Description */
+.hero-content .description {
+  font-size: 18px;
+  color: #f1f1f1;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Tracking Form */
+.tracking-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tracking-form .form-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.845);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* Input Field */
+.form-control {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Track Now Button */
+.btn-track {
+  padding: 6px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-track:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .hero-content .description {
+    font-size: 16px;
+  }
+
+  .tracking-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-track {
     width: 100%;
-    height: 100vh;
   }
-  
-  .hero-overlay {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 40px 20px;
-  }
-  
-  .hero-overlay h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .description {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-  }
-  
-  .tracking-form .form-group {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .tracking-form .form-control {
-    flex: 1;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .tracking-form .btn {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .tracking-form .btn:hover {
-    background-color: #0056b3;
-  }
-  
+}

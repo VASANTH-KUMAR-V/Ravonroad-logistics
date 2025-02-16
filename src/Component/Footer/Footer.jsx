@@ -7,10 +7,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-section about">
-          <h2>DEPOT</h2>
+          <h2>Ravonroad Trucking</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-            voluptate debitis voluptatem et dolorum.
+          Connecting businesses with the world through efficient logistics and transportation services. Whether by land, air, or sea, we move your cargo with precision and care.
           </p>
         </div>
 
@@ -45,7 +44,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>
-          Copyright &copy; 2025 All rights reserved | This template is made with ❤️ by Colorlib
+          Copyright &copy; 2025 All rights reserved | This template is made Ravonroad Trucking
         </p>
       </div>
     </footer>

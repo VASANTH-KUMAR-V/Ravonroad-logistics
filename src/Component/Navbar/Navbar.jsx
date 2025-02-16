@@ -12,7 +12,7 @@ const ResponsiveNavbar = () => {
           <FaEnvelope /> <span className="ms-2">info@ravonroadtrucing.com</span>
           <FaPhone className="ms-4" /> <span className="ms-2">+1 (872) 222-2379</span>
         </div>
-        <div className="social-icons">
+        <div className="social-icons-navbar">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="me-3" />
           </a>
