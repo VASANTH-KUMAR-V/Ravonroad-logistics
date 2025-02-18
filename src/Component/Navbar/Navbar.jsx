@@ -24,10 +24,10 @@ const ResponsiveNavbar = () => {
           <FaPhone className="ms-4" /> <span>+1 (872) 222-2379</span>
         </div>
         <div className="social-icons-navbar">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/ravonroadtrucking?igsh=MTF0dXBxcDRwdzgxZg==" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/19B6MCcqvy/" target="_blank" rel="noopener noreferrer">
             <FaFacebook />
           </a>
         </div>
@@ -46,8 +46,8 @@ const ResponsiveNavbar = () => {
               <Nav.Link onClick={() => scrollToSection("services-wrapper")}>Services</Nav.Link>
               <Nav.Link onClick={() => scrollToSection("about-container")}>About Us</Nav.Link>
               <Nav.Link onClick={() => scrollToSection("why-depot-container")}>Why Us</Nav.Link>
-              <Nav.Link onClick={() => scrollToSection("testimonials-section")}>Testimonials</Nav.Link>
-              <Nav.Link onClick={() => scrollToSection("blog-section")}>Blog</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("testimonial-container")}>Testimonials</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("blog-container")}>Blog</Nav.Link>
               <Nav.Link onClick={() => scrollToSection("contact-container")}>Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -1,0 +1,37 @@
+.blog-container {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .blog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .blog-card {
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+  .blog-container h2{
+    font-size: 32px;
+    color: #007bff  ;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 80px;
+  }
+  

@@ -43,11 +43,11 @@ const Services = () => {
     <div className="services-wrapper">
       <h2 className="contact-heading">Services</h2>
       <p>We ensure safe and timely delivery of goods across the country.</p>
-      <div className="services-container">
+      <div className="services-section-container">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`service-card ${hoveredIndex === index ? "active" : "inactive"}`}
+            className={`service-section-card ${hoveredIndex === index ? "active" : "inactive"}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >

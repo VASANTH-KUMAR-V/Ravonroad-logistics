@@ -1,6 +1,5 @@
 import React from "react";
 import "./Hero.css"; // Import CSS file
-import backgroundImage from '../../Assets/Img/depot_hero_1.jpg';
 
 const HeroSection = () => {
   return (
