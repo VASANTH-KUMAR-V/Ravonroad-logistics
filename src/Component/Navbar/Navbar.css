@@ -7,6 +7,8 @@
   padding: 10px 20px;
   font-size: 14px;
   margin-top: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for a floating effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition for top bar */
 }
 
 .contact-info {
@@ -15,7 +17,7 @@
 }
 
 .contact-info svg {
-  color: #007bff;
+  color: #333;
   font-size: 18px;
   margin-right: 8px;
 }
@@ -24,11 +26,12 @@
   color: #333;
   font-size: 18px;
   margin-left: 12px;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease, color 0.3s ease; /* Added transform for hover effect */
 }
 
 .social-icons-navbar a:hover {
   color: #007bff;
+  transform: scale(1.1); /* Slight scaling effect on hover */
 }
 
 /* Navbar Styling */
@@ -61,10 +64,36 @@
   margin-right: 15px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  position: relative; /* For underline effect */
 }
 
+/* Hover Effect for Navbar Links */
 .navbar-nav .nav-link:hover {
   color: #007bff !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Navbar background color change on scroll */
+.custom-navbar.scrolled {
+  background-color: #f8f9fa !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -77,9 +106,15 @@
     background: white;
     text-align: center;
     padding: 10px 0;
+    transition: all 0.5s ease; /* Slow transition for mobile navbar */
   }
 
   .navbar-nav .nav-link {
     padding: 10px;
+    transition: padding 0.3s ease, color 0.3s ease;
+  }
+
+  .navbar-collapse.collapsing {
+    transition: max-height 0.5s ease !important; /* Slow collapse effect */
   }
 }

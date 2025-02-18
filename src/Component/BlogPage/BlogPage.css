@@ -1,37 +1,91 @@
 .blog-container {
-    text-align: center;
-    padding: 40px 20px;
-  }
-  
-  .blog-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .blog-card {
-    width: 350px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .read-more {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .read-more:hover {
-    text-decoration: underline;
-  }
+  text-align: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
 
-  .blog-container h2{
-    font-size: 32px;
-    color: #007bff  ;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 80px;
+/* Title Animation */
+.blog-container h2 {
+  font-size: 32px;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 80px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Blog Card */
+.blog-card {
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: popIn 0.8s ease-in-out forwards;
+}
+
+/* Card Hover Effect */
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Read More Link */
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Read More Hover Effect */
+.read-more:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
