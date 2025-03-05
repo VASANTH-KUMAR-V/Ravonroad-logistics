@@ -1,8 +1,8 @@
 import React from "react";
 import "./About.css";
-import truckImage from "../../Assets/Img/depot_img_1.jpg";
-import planeImage from "../../Assets/Img/depot_img_2.jpg";
-import shipImage from "../../Assets/Img/depot_img_3.jpg";
+import truckImage from "../../Assets/Img/BG-1.jpeg";
+import planeImage from "../../Assets/Img//BG-2.jpg";
+import shipImage from "../../Assets/Img/BG-3.jpg";
 
 const aboutContent = {
   title: "About Us",
@@ -13,21 +13,21 @@ const aboutContent = {
 const services = [
   {
     image: truckImage,
-    title: "Truck Insurance",
+    title: "Commercial Rentals",
     description:
-      "Protect your goods and vehicles with our comprehensive truck insurance policies, ensuring safe and hassle-free transportation.",
+      "Our wide selection of rental vehicles and flexible terms help you stay on track, whenever or wherever you need them.",
   },
   {
     image: planeImage,
-    title: "Plane Transportation",
+    title: "Fleet Management",
     description:
-      "Fast and efficient air freight services to ensure timely deliveries across the globe.",
+      "Expert fleet consultants, cutting-edge technology, and outside-the-box solutions to keep your business moving.",
   },
   {
     image: shipImage,
-    title: "Sea & Air Freight",
+    title: "Electrify Fleet",
     description:
-      "Reliable shipping solutions for international logistics, covering both sea and air freight options.",
+      "Curious about EVs but don't know where to start? Get help with Electrify Fleet resources, tools, and experts!",
   },
 ];
 
